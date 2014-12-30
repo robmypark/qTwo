@@ -4,21 +4,20 @@
     <title>TITLE</title>
 
     <script src="js/angular.js"></script>
-    <script src="modules/mainMdle.js"></script>
-    <script src="controllers/mainCtlr.js"></script>
+    <script src="modules/taskPieMdle.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
     <script src="node_modules/angular-resource/angular-resource.js"></script>
-    <script src="modules/taskPieMdle.js"></script>
+    <script src="modules/mainMdle.js"></script>
+    <script src="controllers/mainCtlr.js"></script>
+    <script src="directives/taskPieDir.js"></script>
+    <script src="services/taskLogSrvc.js"></script>
+    
     <link href="css/bootstrap.css" rel="stylesheet">
   </head>
 
   <body ng-controller='mainCtlr'>
-    <div>
-      <div ng-repeat = "task in data.tasks">
-        {{task}}
-      </div>
-
-      </taskPie>
+    <div ng-controller='taskPieCtlr'>
+      <task-pie></task-pie>
     </div>
   </body>
 </html>

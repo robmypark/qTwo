@@ -1,3 +1,4 @@
+//main controller that gets the tasks model
 'use strict';
 qTwo.controller('mainCtlr', function($scope, $http){
   
