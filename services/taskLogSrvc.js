@@ -29,11 +29,8 @@ factory('taskLog', function(currentDate){
     },
 
     getTask: function(){
-      if(this.task == undefined || this.task == null){
-        return "%bql";
-      } else {
-        return this.task;
-      }
+      if(this.task == undefined || this.task == null) throw "bql- this.task undefined or null";
+      return this.task;
     }
   }
 });

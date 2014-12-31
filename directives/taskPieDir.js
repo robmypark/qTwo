@@ -3,10 +3,10 @@ taskPieMdle.
 directive('taskPie', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/addTask.html'
+    templateUrl: 'views/taskPie.html'
   };
 }).
-controller('taskPieCtlr', ['$scope', function($scope, taskLog) {
+controller('taskPieCtlr', ['$scope', 'taskLog', function($scope, taskLog) {
   $scope.currentTask = null;
 
   $scope.getTaskClass = function(task){
@@ -18,19 +18,16 @@ controller('taskPieCtlr', ['$scope', function($scope, taskLog) {
   }
 
   $scope.taskClick = function(task){
-    var currentTask = taskLog.getTask();
-    if(currentTask == task.name){
-
-      console.log("bql- taskPieCtlr going to stop log now");
-
+    if($scope.currentTask == task){
       taskLog.stop(task);
+      $scope.currentTask = null;
     } else {
-
-      console.log("bql- taskPieCtrlr gooing to start log now");
-
+      if($scope.currentTask != null){
+        taskLog.stop(task);
+      }
       taskLog.start(task);
+      $scope.currentTask = taskLog.getTask();
     }
-    $scope.currentTask = taskLog.getTask();
   }
 }]);
 
