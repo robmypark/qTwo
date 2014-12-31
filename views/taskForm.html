@@ -1,0 +1,17 @@
+<h3> add a task  </h3>
+<form name='taskForm' novalidate>
+  <label>task name:</label>
+  <input name='name' type='text' ng-model='data.newTask.name' required></input>
+  
+  <select name='type' ng-model='data.newTask.type' ng-options='task.type as task.action for task in data.tasks'>
+    <option value=''>pick a type</option>
+  </select>
+  
+  <label>if you want to make a new type:</label>
+  <input name='new-type' type='text' ng-model='data.newTask.newType'></input>
+  
+  <label>priority (1 highest):</label>
+  <input type="range" name="points" min="1" max="5" required>
+
+  <button type='submit' ng-disabled='taskForm.$invalid'>Add</button>
+</form>
