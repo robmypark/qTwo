@@ -23,9 +23,10 @@ factory('taskLog', function(currentDate){
         "startTime": this.startTime,
         "endTime": this.endTime
       }
-      var lsCount = localStorage.length + 1; 
+      var lsCount = localStorage.length + 1;
       localStorage.setItem(lsCount, newLog);
       this.task,this.startTime,this.endTime = null;
+      console.log('bql. localStorage count' + lsCount);
     },
 
     getTask: function(){

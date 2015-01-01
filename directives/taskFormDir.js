@@ -3,6 +3,6 @@ taskPieMdle.
 directive('taskForm', function(){
   return{
     restrict: 'E',
-    templateUrl: 'views/taskForm.html'
+    templateUrl: 'views/addTask.html'
   };
 });
