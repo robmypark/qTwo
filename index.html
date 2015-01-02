@@ -4,12 +4,13 @@
     <title>TITLE</title>
 
     <script src="js/angular.js"></script>
-    <script src="modules/taskPieMdle.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
     <script src="node_modules/angular-resource/angular-resource.js"></script>
     <script src="modules/mainMdle.js"></script>
+    <script src="modules/taskPieMdle.js"></script>
     <script src="controllers/mainCtlr.js"></script>
     <script src="directives/taskPieDir.js"></script>
+    <script src="directives/taskFormDir.js"></script>
     <script src="services/taskLogSrvc.js"></script>
      
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -19,6 +20,7 @@
     <div ng-controller='taskPieCtlr'>
       <task-pie></task-pie>
       <task-form></task-form>
+      <ng-view/>
     </div>
   </body>
 </html>

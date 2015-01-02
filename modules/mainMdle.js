@@ -26,7 +26,13 @@ config(function($routeProvider){
     controller: 'taskPieCtlr'
   });
 
+  $routeProvider.when('/taskCount',{
+    templateUrl: 'views/taskCount.html',
+    controller: 'taskPieCtlr'
+  });
+
   $routeProvider.otherwise({
-    templateUrl: 'views/taskPie.html'
+    templateUrl: 'views/taskCount.html',
+    controller: 'taskPieCtlr'
   });
 });

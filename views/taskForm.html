@@ -13,5 +13,5 @@
   <label>priority (1 highest):</label>
   <input type="range" name="points" min="1" max="5" required>
 
-  <button type='submit' ng-disabled='taskForm.$invalid'>Add</button>
+  <button type='submit' ng-disabled='taskForm.$invalid' ng-click='processNewTask(data.newTask)'>save</button>
 </form>

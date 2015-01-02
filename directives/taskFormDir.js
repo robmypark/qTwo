@@ -5,4 +5,10 @@ directive('taskForm', function(){
     restrict: 'E',
     templateUrl: 'views/addTask.html'
   };
+}).
+controller('taskFormCtlr', function(){
+  $scope.processNewTask = function (newTask){
+    
+  }
+
 });
