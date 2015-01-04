@@ -1,4 +1,4 @@
 <h3> {{data.user}}'s Tasks  </h3>
-<div ng-repeat = "task in data.tasks">
+<div ng-repeat = "task in data.tasks | orderBy: 'priority'">
   <button type="button" ng-class="getTaskClass(task)" ng-click="taskClick(task)"> {{task.name}}/{{task.priority}}/{{task.type}}</button>
 </div>

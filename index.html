@@ -19,8 +19,11 @@
   <body ng-controller='mainCtlr'>
     <div ng-controller='taskPieCtlr'>
       <task-pie></task-pie>
-      <task-form></task-form>
       <ng-view/>
     </div>
+    <!-- placeholder for <task-form></task-form> -->
+    
+    <!-- temporary -->
+    <button onclick="localStorage.clear()">localStorage.clear()</button>
   </body>
 </html>

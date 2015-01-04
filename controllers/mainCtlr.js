@@ -2,7 +2,7 @@
 'use strict';
 qTwo.controller('mainCtlr', function($scope, $http, tasksJson){
   
-  $scope.data = {user: "blee"};
+  $scope.data = {user: "bl_winter"};
   $http.get(tasksJson)
     .success(function(data){
       $scope.data.tasks = data;
