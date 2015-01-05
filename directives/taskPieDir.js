@@ -8,6 +8,7 @@ directive('taskPie', function() {
 }).
 controller('taskPieCtlr', ['$scope', 'taskLog', function($scope, taskLog) {
   $scope.currentTask = null;
+  $scope.tally = 0;
 
   $scope.getTaskClass = function(task){
     if(task.name == $scope.currentTask){
@@ -29,5 +30,13 @@ controller('taskPieCtlr', ['$scope', 'taskLog', function($scope, taskLog) {
       $scope.currentTask = taskLog.getTask();
     }
   }
+
+  $scope.$on('tally', function(event){
+    if($scope.currentTask != null){
+      console.log('bql. tally test ' + event);
+      $scope.tally++;
+      console.log('bql. tally test: ' + $scope.currentTask + ' / ' + $scope.tally);
+    }
+  });
 }]);
 

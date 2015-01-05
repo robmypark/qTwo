@@ -7,10 +7,12 @@ qTwo.controller('mainCtlr', function($scope, $http, tasksJson){
     .success(function(data){
       $scope.data.tasks = data;
       console.log('bql-http ok');
+      console.log('bql. controller scope test: ' + $scope.data.tasks);
     })
     .error(function(error){
       $scope.data.error = error;
       console.log('bql-http error');
     });
   });
+ 
 

@@ -11,15 +11,19 @@
     <script src="controllers/mainCtlr.js"></script>
     <script src="directives/taskPieDir.js"></script>
     <script src="directives/taskFormDir.js"></script>
+    <script src="directives/focusRateDir.js"></script>
     <script src="services/taskLogSrvc.js"></script>
      
     <link href="css/bootstrap.css" rel="stylesheet">
   </head>
 
   <body ng-controller='mainCtlr'>
-    <div ng-controller='taskPieCtlr'>
-      <task-pie></task-pie>
-      <ng-view/>
+    <div ng-controller='focusRateCtlr'>
+      <focus-rate></focus-rate>
+      <div ng-controller='taskPieCtlr'>
+        <task-pie></task-pie>
+        <ng-view/>
+      </div>
     </div>
     <!-- placeholder for <task-form></task-form> -->
     
